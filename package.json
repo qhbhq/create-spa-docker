@@ -1,0 +1,7 @@
+{
+  "name": "create-spa-docker",
+  "version": "0.0.1",
+  "description": "Create docker for single page application",
+  "author": "qiuhongbingo@outlook.com",
+  "license": "MIT"
+}
