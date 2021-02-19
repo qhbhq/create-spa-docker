@@ -20,6 +20,13 @@ npx create-spa-docker
 yarn create spa-docker
 ```
 
+#### now you can use Makefile to create image
+
+```bash
+make beta
+# or make prod
+```
+
 ## Screenshot
 
-<img src="https://raw.githubusercontent.com/qhbhq/image/master/20210219184813.png" width=600>
+<img src="https://raw.githubusercontent.com/qhbhq/image/master/20210219184813.png" width=500>
