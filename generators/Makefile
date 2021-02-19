@@ -1,23 +1,24 @@
+REGISTRY = <%= imageRegistry ? imageRegistry + '/' : '' %>
 NAME = <%= imageName %>
-REGISTRY = <%= imageRegistry %>
 TAG = latest
 
 base:
 	echo building ${NAME}-base:latest
 	cp docker/base/Dockerfile .
-	docker build -t ${NAME}-base:latest .
+	docker build -t ${REGISTRY}${NAME}-base:latest .
 	rm Dockerfile
+	docker push ${REGISTRY}${NAME}-base:latest
 
 beta: base
 	echo building ${NAME}:${TAG}
 	cp docker/beta/Dockerfile .
-	docker build -t ${NAME}:${TAG} .
+	docker build -t ${REGISTRY}${NAME}:${TAG} .
 	rm Dockerfile
-	docker push ${REGISTRY}/${NAME}:${TAG}
+	docker push ${REGISTRY}${NAME}:${TAG}
 
 prod: base
 	echo building ${NAME}:${TAG}
 	cp docker/prod/Dockerfile .
-	docker build -t ${NAME}:${TAG} .
+	docker build -t ${REGISTRY}${NAME}:${TAG} .
 	rm Dockerfile
-	docker push ${REGISTRY}/${NAME}:${TAG}
+	docker push ${REGISTRY}${NAME}:${TAG}

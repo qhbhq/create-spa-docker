@@ -12,6 +12,7 @@ const PROMPTS = [
     name: 'imageName',
     message: 'Your image name',
     default: 'create-spa-docker',
+    validate: (input: string) => !!input,
   },
   {
     type: 'input',
