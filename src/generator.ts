@@ -30,9 +30,7 @@ export class DockerGenerator extends Generator {
 
   constructor() {
     super([], {
-      env: Yeoman.createEnv([], {
-        cwd: join(CWD),
-      }),
+      env: Yeoman.createEnv([], { cwd: join(CWD) }),
       resolved: GENERATOR_DIR,
     })
   }
