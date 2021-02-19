@@ -3,5 +3,21 @@
   "version": "0.0.1",
   "description": "Create docker for single page application",
   "author": "qiuhongbingo@outlook.com",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsc --watch"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "consola": "^2.15.3",
+    "fast-glob": "^3.2.5",
+    "fs-extra": "^9.1.0",
+    "yeoman-environment": "^2.10.3",
+    "yeoman-generator": "^4.13.0"
+  },
+  "devDependencies": {
+    "@types/yeoman-environment": "^2.10.2",
+    "@types/yeoman-generator": "^4.11.3",
+    "typescript": "^4.1.5"
+  }
 }
