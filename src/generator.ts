@@ -11,12 +11,20 @@ const PROMPTS = [
     type: 'input',
     name: 'imageName',
     message: 'Your image name',
+    default: 'create-spa-docker',
+  },
+  {
+    type: 'input',
+    name: 'imageRegistry',
+    message: 'Your image registry',
+    default: 'registry.cn-shenzhen.aliyuncs.com',
   },
 ]
 
 export class DockerGenerator extends Generator {
   inputs = {
     imageName: '',
+    imageRegistry: '',
   }
 
   constructor() {
@@ -31,6 +39,7 @@ export class DockerGenerator extends Generator {
   async prompting() {
     const inputs = await this.prompt<Record<string, string>>(PROMPTS)
     this.inputs.imageName = inputs.imageName
+    this.inputs.imageRegistry = inputs.imageRegistry
   }
 
   writing() {

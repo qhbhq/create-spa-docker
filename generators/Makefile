@@ -1,4 +1,5 @@
 NAME = <%= imageName %>
+REGISTRY = <%= imageRegistry %>
 TAG = latest
 
 base:
@@ -12,9 +13,11 @@ beta: base
 	cp docker/beta/Dockerfile .
 	docker build -t ${NAME}:${TAG} .
 	rm Dockerfile
+	docker push ${REGISTRY}/${NAME}:${TAG}
 
 prod: base
 	echo building ${NAME}:${TAG}
 	cp docker/prod/Dockerfile .
 	docker build -t ${NAME}:${TAG} .
 	rm Dockerfile
+	docker push ${REGISTRY}/${NAME}:${TAG}

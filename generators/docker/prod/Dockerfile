@@ -1,5 +1,5 @@
 # build stage
-FROM <%= imageName %>-base:latest as build-stage
+FROM <%= imageRegistry %>/<%= imageName %>-base:latest as build-stage
 WORKDIR /app
 COPY . .
 RUN yarn build
