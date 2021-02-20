@@ -1,34 +1,9 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-**/node_modules
-/src/utils/request-temp.js
-
-# production
-/.vscode
-
-# misc
-.DS_Store
-npm-debug.log*
-yarn-error.log
-
-/coverage
 .idea
-package-lock.json
-*bak
 .vscode
+.DS_Store
 
-# visual studio code
-.history
-*.log
+node_modules
+dist
 
-functions/mock
-.temp/**
-
-# umi
-.umi
-.umi-production
-
-# screenshot
-screenshot
-.firebase
+npm-debug.log
+yarn-error.log
